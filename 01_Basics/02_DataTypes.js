@@ -12,7 +12,7 @@ let isLoggedIn = true //boolean
 
 
 // Primitive DataTypes
-// number => 2 to power 53
+// number => 2 to power 53 2**53 - 1
 // bigint 
 // string => ""
 // boolean => true / false
