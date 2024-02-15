@@ -45,6 +45,7 @@ console.log(myArr.indexOf(3)); // 3
 
 const newArr = myArr.join();
 console.log(newArr);
+console.log(typeof newArr);
 
 //  slice ,splice
 console.log('A', myArr);
@@ -56,3 +57,90 @@ console.log('B', myArr);
 const myn2 = myArr.splice(1, 3);
 console.log('C', myArr);
 console.log(myn2);
+
+// *************** Methods of Arrays *****************************//
+
+// push()
+// Adds one or more elements to the end of an array.
+// let fruits = ['apple', 'banana'];
+// fruits.push('orange');
+// fruits is now ['apple', 'banana', 'orange']
+
+// pop()
+// Removes the last element from an array.
+// let fruits = ['apple', 'banana', 'orange'];
+// fruits.pop();
+// fruits is now ['apple', 'banana']
+
+// shift()
+// Removes the first element from an array.
+// let fruits = ['apple', 'banana', 'orange'];
+// fruits.shift();
+// fruits is now ['banana', 'orange']
+
+// unshift()
+// Adds one or more elements to the beginning of an array.
+// let fruits = ['banana', 'orange'];
+// fruits.unshift('apple');
+// fruits is now ['apple', 'banana', 'orange']
+
+// concat()
+// Combines two or more arrays.
+// let fruits = ['apple', 'banana'];
+// let vegetables = ['carrot', 'broccoli'];
+// let combined = fruits.concat(vegetables);
+// combined is now ['apple', 'banana', 'carrot', 'broccoli']
+
+// slice()
+// Returns a portion of an array.
+// let fruits = ['apple', 'banana', 'orange', 'kiwi'];
+// let slicedFruits = fruits.slice(1, 3);
+// slicedFruits is now ['banana', 'orange']
+
+// splice()
+// Changes the contents of an array by removing or replacing existing elements and/or adding new elements.
+// let fruits = ['apple', 'banana', 'orange'];
+// fruits.splice(1, 1, 'grape');
+// fruits is now ['apple', 'grape', 'orange']
+
+// indexOf()
+// Returns the first index at which a given element can be found in the array, or -1 if it is not present.
+// let fruits = ['apple', 'banana', 'orange'];
+// let index = fruits.indexOf('banana');
+// index is 1
+
+// includes()
+// Determines whether an array includes a certain element.
+// let fruits = ['apple', 'banana', 'orange'];
+// let hasBanana = fruits.includes('banana');
+// hasBanana is true
+
+// forEach()
+// Calls a function once for each element in the array.
+// let fruits = ['apple', 'banana', 'orange'];
+// fruits.forEach((fruit) => {
+//   console.log(fruit);
+// });
+// logs: apple, banana, orange
+
+// Array.isArray()
+// Checks if a given value is an array.
+// let arr = [1, 2, 3];
+// let isArr = Array.isArray(arr); // true
+
+// Array.from()
+// Creates a new, shallow-copied array from an array-like or iterable object.
+// let iterable = 'hello';
+// let newArray = Array.from(iterable);
+// newArray is now ['h', 'e', 'l', 'l', 'o']
+
+// Array.of()
+// Creates a new array with the specified elements.
+// let newArray = Array.of(1, 2, 3);
+// newArray is now [1, 2, 3]
+
+// Array.prototype.flat()
+// Creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+// let nestedArray = [1, [2, [3, 4]]];
+// let flatArray = nestedArray.flat(2);
+// flatArray is now [1, 2, 3, 4]
