@@ -42,3 +42,34 @@
 // (): Immediately invokes the function, making it self-executing.
 // This creates a private scope, preventing variables and functions within the IIFE from polluting the global namespace.
 // The console.log statement outputs "Hello!" to the console before the function finishes execution.
+
+//================================ ================================================//
+// In JavaScript, when you have two consecutive statements that start with a function or an object literal and do not have a semicolon between them,
+//  they might be interpreted as a single statement. This can lead to unexpected behavior,
+//  as the JavaScript engine may attempt to combine them.
+
+// Let's consider the following example without a semicolon
+(function firstFunction() {
+  console.log('First function');
+})()(function secondFunction() {
+  console.log('Second function');
+})();
+
+(function firstFunction() {
+  console.log('First function');
+})(function secondFunction() {
+  console.log('Second function');
+})();
+
+// This can cause a syntax error, as the second set of parentheses might be treated as an attempt to call the result of the first function immediately,
+// and the syntax is not valid.
+// To avoid this potential issue, it's a good practice to add a semicolon after the first statement:
+(function firstFunction() {
+  console.log('First function');
+})();
+
+(function secondFunction() {
+  console.log('Second function');
+})();
+//By adding the semicolon, you explicitly separate the two statements,
+// ensuring that the second function is treated as a new statement and not as part of the first function call.
