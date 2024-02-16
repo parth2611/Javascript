@@ -108,3 +108,29 @@ var arrowFunction = () => {
 };
 
 arrowFunction(); // 'this' depends on the context where the arrow function is defined
+
+const obj = {
+  count: 5,
+  increment: function () {
+    this.count++; // this refers to the obj object
+    return () => {
+      console.log(this.count); // This inherits this from the increment function, so it's obj
+    };
+  },
+};
+
+const innerFunc = obj.increment();
+innerFunc(); // Output: 6
+
+// 7.Call, Apply, and Bind Methods:
+// You can explicitly control this by using these methods, forcing it to a specific object regardless of how the function is called.
+function multiply(a, b) {
+  return this.value * a * b;
+}
+
+const number = { value: 10 };
+
+const result1 = multiply.call(number, 2, 3); // Output: 60 (this is set to number)
+const result2 = multiply.apply(number, [2, 3]); // Output: 60 (this is set to number)
+const boundFunc = multiply.bind(number, 2, 3); // Output: 60 (this is set to number when boundFunc is called)
+const result3 = boundFunc();
