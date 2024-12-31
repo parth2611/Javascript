@@ -10,20 +10,21 @@ console.log(myDate.toLocaleString()); // 2/14/2024, 4:00:03 PM
 console.log(myDate.toLocaleTimeString()); // 4:00:03 PM
 console.log(myDate.toTimeString()); // 16:00:03 GMT+0530 (India Standard Time)
 console.log(myDate.toUTCString()); // Wed, 14 Feb 2024 10:30:03 GMT
+console.log(myDate.toJSON()); // 2024-12-28T09:53:21.712Z
 console.log(typeof myDate); //object
 
 // let myCreatedDate = new Date(2023,0,23)
 let myCreatedDate = new Date('2024-02-14');
-console.log(myCreatedDate.toLocaleString());
+console.log(myCreatedDate.toLocaleString()); // 2/14/2024, 5:30:00 AM
 
 let mytimeStamp = Date.now();
-console.log(mytimeStamp);
-console.log(myCreatedDate.getTime());
-console.log(Math.floor(Date.now() / 1000));
+console.log(mytimeStamp); //1735379601734
+console.log(myCreatedDate.getTime()); //1707868800000
+console.log(Math.floor(Date.now() / 1000)); // 1735379601
 
 let newDate = new Date();
-console.log(newDate.getFullYear() + 1);
-console.log(`${newDate.getDay()} and the time is ${newDate.getTime()}`);
+console.log(newDate.getFullYear() + 1); //2025
+console.log(`${newDate.getDay()} and the time is ${newDate.getTime()}`); //6 and the time is 1735379601735
 
 newDate.toLocaleString('default', {
   weekday: 'long',

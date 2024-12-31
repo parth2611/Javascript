@@ -20,3 +20,5 @@ let isLoggedIn = true; //boolean
 // Object Datatypes
 console.log(typeof null); //object
 console.log(typeof undefined); // undefined
+console.log(typeof Symbol); // function
+console.log(typeof BigInt); // function

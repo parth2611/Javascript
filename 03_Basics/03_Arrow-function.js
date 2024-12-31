@@ -48,7 +48,7 @@ const addTwo1 = (num1, num2) => {
 const addTwo2 = (num1, num2) => num1 + num2;
 
 // Example 3: Parentheses for implicit return
-const addTwo3 = (num1, num2) => num1 + num2;
+const addTwo3 = (num1, num2) => (num1 + num2);
 
 // Example 4: Object return
 const addTwo4 = (num1, num2) => ({ username: 'parth fadadu' });

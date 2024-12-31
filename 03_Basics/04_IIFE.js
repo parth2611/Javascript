@@ -49,17 +49,17 @@
 //  as the JavaScript engine may attempt to combine them.
 
 // Let's consider the following example without a semicolon
-(function firstFunction() {
-  console.log('First function');
-})()(function secondFunction() {
-  console.log('Second function');
-})();
+// (function firstFunction() {
+//   console.log('First function');
+// })()(function secondFunction() {
+//   console.log('Second function');
+// })();
 
-(function firstFunction() {
-  console.log('First function');
-})(function secondFunction() {
-  console.log('Second function');
-})();
+// (function firstFunction() {
+//   console.log('First function');
+// })(function secondFunction() { 
+//   console.log('Second function');
+// })();
 
 // This can cause a syntax error, as the second set of parentheses might be treated as an attempt to call the result of the first function immediately,
 // and the syntax is not valid.
