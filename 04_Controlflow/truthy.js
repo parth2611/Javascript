@@ -73,3 +73,8 @@
 // Explicitly check for empty arrays/objects using .length or Object.keys.
 // Use the Nullish Coalescing Operator (??) to handle null or undefined values gracefully.
 // Use the Ternary Operator for concise conditional expressions.
+
+
+//false == 0  //true
+//false == '' //true
+//0 == ''     //true
